@@ -1,0 +1,93 @@
+using System;
+using System.CodeDom;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Do_whatever_i_want
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            First();
+
+            
+        }
+
+        static string First()
+        {
+            string commands = null;
+            Console.WriteLine("Welcome to Everything program by mydraken!");
+            Console.WriteLine();
+            Console.WriteLine("WARNING: This program is in ALPHA so if you do a wrong input you may lose all of your data. This program DOES NOT HAVE a save slot.");
+            Console.WriteLine();
+            Console.WriteLine("If you need help, please type /help, program verions /version, update log /updatelog and finally for credits please type /credits");
+            Console.WriteLine("TIP: Did you know? If you do /clean it will clean the whole entire text!");
+            Console.WriteLine();
+            Console.WriteLine("Please type /start to start the program, or the commands.");
+
+            commands = Console.ReadLine();
+
+            while (true)
+            {
+                if (commands == "/help")
+                {
+                    Console.WriteLine("/start Allows you to fully start the program");
+                    Console.WriteLine("/version allows you to see the versions, check the if it's realesed or not");
+                    Console.WriteLine("/updatelog allows you to see whats added in each version that is in /version");
+                    Console.WriteLine("/credits to see the programs full credits (included links)");
+                    Console.WriteLine("/clean makes so much blank space that looks like it cleaned it");
+                    Console.WriteLine("More commands Coming soon!");
+                    commands = null;
+                    commands = Console.ReadLine();
+                }
+
+                if (commands == "/version")
+                {
+                    Console.WriteLine("Everything Program");
+                    Console.WriteLine("version: 0.0.1");
+                    Console.WriteLine("ALPHA");
+                    commands = null;
+                    commands = Console.ReadLine();
+                }
+
+                if (commands == "/updatelog")
+                {
+                    Console.WriteLine("Update 0.0.2 Released on 2023/10/18 Added: The welcome sentences also the /start, /version, /updatelog, /credits and /clean");
+                    commands = null;
+                    commands = Console.ReadLine();
+                }
+
+                if (commands == "/credits")
+                {
+                    Console.WriteLine("Download the new update at Github: https://github.com/mydraken2/Everything-Program/releases");
+
+                    Console.WriteLine("Coded in VS Code");
+                    Console.WriteLine("Made with csharp");
+                    Console.WriteLine("includes code by ChatGPT");
+                    commands = null;
+                    commands = Console.ReadLine();
+                }
+
+                if (commands == "/clean")
+                {
+                    for (int i = 0; i < 1000; i++)
+                    {
+                        Console.WriteLine();
+                    }
+                    commands = null;
+                    commands = Console.ReadLine();
+                }
+
+                if (commands == "/start")
+                {
+                    Console.WriteLine("Starting program it may take a while......");
+                    break;
+                }
+            }
+            return commands;
+        }
+    }
+}
