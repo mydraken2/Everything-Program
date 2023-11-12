@@ -1,19 +1,22 @@
 using System;
 using System.CodeDom;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Do_whatever_i_want
 {
-    internal class Program
+    using System;
+
+    class Program
     {
         static void Main(string[] args)
         {
             First();
-
-            
+            Loading();
+            Console.WriteLine("Welcome to EVERYTHING PROGRAM!");
         }
 
         static string First()
@@ -23,8 +26,7 @@ namespace Do_whatever_i_want
             Console.WriteLine();
             Console.WriteLine("WARNING: This program is in ALPHA so if you do a wrong input you may lose all of your data. This program DOES NOT HAVE a save slot.");
             Console.WriteLine();
-            Console.WriteLine("If you need help, please type /help, program verions /version, update log /updatelog and finally for credits please type /credits");
-            Console.WriteLine("TIP: Did you know? If you do /clean it will clean the whole entire text!");
+            Console.WriteLine("If you need help, please type /help, program versions /version, update log /updatelog and finally for credits please type /credits");
             Console.WriteLine();
             Console.WriteLine("Please type /start to start the program, or the commands.");
 
@@ -35,10 +37,9 @@ namespace Do_whatever_i_want
                 if (commands == "/help")
                 {
                     Console.WriteLine("/start Allows you to fully start the program");
-                    Console.WriteLine("/version allows you to see the versions, check the if it's realesed or not");
-                    Console.WriteLine("/updatelog allows you to see whats added in each version that is in /version");
-                    Console.WriteLine("/credits to see the programs full credits (included links)");
-                    Console.WriteLine("/clean makes so much blank space that looks like it cleaned it");
+                    Console.WriteLine("/version allows you to see the versions, check if it's released or not");
+                    Console.WriteLine("/updatelog allows you to see what's added in each version that is in /version");
+                    Console.WriteLine("/credits to see the program's full credits (including links)");
                     Console.WriteLine("More commands Coming soon!");
                     commands = null;
                     commands = Console.ReadLine();
@@ -47,7 +48,7 @@ namespace Do_whatever_i_want
                 if (commands == "/version")
                 {
                     Console.WriteLine("Everything Program");
-                    Console.WriteLine("version: 0.0.1");
+                    Console.WriteLine("version: 0.0.4");
                     Console.WriteLine("ALPHA");
                     commands = null;
                     commands = Console.ReadLine();
@@ -55,7 +56,8 @@ namespace Do_whatever_i_want
 
                 if (commands == "/updatelog")
                 {
-                    Console.WriteLine("Update 0.0.2 Released on 2023/10/18 Added: The welcome sentences also the /start, /version, /updatelog, /credits and /clean");
+                    Console.WriteLine("Update 0.0.4 Released on 2023/11/12 Added: 1. Deleted the /clean command causing of lagging. 2. Added the loading screen after typing /start AND the welcome text.");
+                    Console.WriteLine("Update 0.0.2 Released on 2023/10/18 Added: 1. The welcome sentences also the /start, /version, /updatelog, /credits and /clean");
                     commands = null;
                     commands = Console.ReadLine();
                 }
@@ -63,20 +65,9 @@ namespace Do_whatever_i_want
                 if (commands == "/credits")
                 {
                     Console.WriteLine("Download the new update at Github: https://github.com/mydraken2/Everything-Program/releases");
-
                     Console.WriteLine("Coded in VS Code");
-                    Console.WriteLine("Made with csharp");
+                    Console.WriteLine("Made with C#");
                     Console.WriteLine("includes code by ChatGPT");
-                    commands = null;
-                    commands = Console.ReadLine();
-                }
-
-                if (commands == "/clean")
-                {
-                    for (int i = 0; i < 1000; i++)
-                    {
-                        Console.WriteLine();
-                    }
                     commands = null;
                     commands = Console.ReadLine();
                 }
@@ -89,5 +80,24 @@ namespace Do_whatever_i_want
             }
             return commands;
         }
-    }
-}
+
+        static void Loading()
+        {
+            // Perform loading logic here
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
+
+            Console.WriteLine("Loading... 5%");
+            Console.WriteLine("Loading... 10%");
+            Console.WriteLine("Loading... 15%");
+            Console.WriteLine("Loading... 20%");
+            Console.WriteLine("Loading... 45%");
+            Console.WriteLine("Loading... 50%"); 
+            Console.WriteLine("Loading... 60%");
+            Console.WriteLine("Loading... 75%");
+            Console.WriteLine("Loading... 90%");
+            Console.WriteLine("Loading... 100%");
+
+            return;
+        }
