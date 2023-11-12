@@ -98,6 +98,5 @@ namespace Do_whatever_i_want
             Console.WriteLine("Loading... 75%");
             Console.WriteLine("Loading... 90%");
             Console.WriteLine("Loading... 100%");
-
             return;
         }
