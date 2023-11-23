@@ -16,7 +16,21 @@ namespace Do_whatever_i_want
         {
             First();
             Loading();
+
             Console.WriteLine("Welcome to EVERYTHING PROGRAM!");
+            Console.WriteLine("1 wiki");
+            
+
+
+            int input = Convert.ToInt32(Console.ReadLine());
+            if (input == 1)
+            {
+                wiki();
+            }
+            else if (input == 2)
+            {
+                calculator();
+            }
         }
 
         static string First()
@@ -48,7 +62,7 @@ namespace Do_whatever_i_want
                 if (commands == "/version")
                 {
                     Console.WriteLine("Everything Program");
-                    Console.WriteLine("version: 0.0.4");
+                    Console.WriteLine("version: 0.1.0");
                     Console.WriteLine("ALPHA");
                     commands = null;
                     commands = Console.ReadLine();
@@ -56,6 +70,7 @@ namespace Do_whatever_i_want
 
                 if (commands == "/updatelog")
                 {
+                    Console.WriteLine("Update 0.1.0 Released on 2023/11/22 Added: 1. Created The wiki which contains the minecraft wiki, minecraft blocks wiki, and a wiki of grass blocks.");
                     Console.WriteLine("Update 0.0.4 Released on 2023/11/12 Added: 1. Deleted the /clean command causing of lagging. 2. Added the loading screen after typing /start AND the welcome text.");
                     Console.WriteLine("Update 0.0.2 Released on 2023/10/18 Added: 1. The welcome sentences also the /start, /version, /updatelog, /credits and /clean");
                     commands = null;
@@ -67,7 +82,7 @@ namespace Do_whatever_i_want
                     Console.WriteLine("Download the new update at Github: https://github.com/mydraken2/Everything-Program/releases");
                     Console.WriteLine("Coded in VS Code");
                     Console.WriteLine("Made with C#");
-                    Console.WriteLine("includes code by ChatGPT");
+                    Console.WriteLine("May includes code by ChatGPT");
                     commands = null;
                     commands = Console.ReadLine();
                 }
@@ -100,3 +115,50 @@ namespace Do_whatever_i_want
             Console.WriteLine("Loading... 100%");
             return;
         }
+
+        static void wiki()
+        {
+            Console.WriteLine("1 MInecraft");
+            int input = Convert.ToInt32(Console.ReadLine());
+            if (input == 1)
+            {
+                minecraft_wiki();
+            }
+        }
+
+        static void minecraft_wiki()
+        {
+            Console.WriteLine("1 blocks");
+            int input = Convert.ToInt32(Console.ReadLine());
+            if (input == 1)
+            {
+                minecraft_blocks_wiki();
+            }
+        }
+
+        static void minecraft_blocks_wiki()
+        {
+            Console.WriteLine("1 Grass block");
+
+
+
+            int input = Convert.ToInt32(Console.ReadLine());
+            if (input == 1)
+            {
+                Console.WriteLine("                      Grass Block");
+                Console.WriteLine();
+                Console.WriteLine("History");
+                Console.WriteLine("A grass block is a old classic icon of minecraft (changed on 2023) and now it is a creeper but still the Minecraft Bedrock Edition's icon is a Grass block.");
+                Console.WriteLine("Where can you find it");
+                Console.WriteLine("Grass blocks can be found on the ground, it has a history that alot of player builded a small house by dirt.");
+            }
+                
+        }
+
+        static void calculator()
+        {
+
+        }
+    }
+}
+
